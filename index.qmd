@@ -1,15 +1,16 @@
 ---
 title: "Zachary Himmelsbach"
 image: PIER_photo.jpg
+toc: false
 about:
   template: broadside
 ---
 
-# Current Work
-
 I am a Harvard-trained data scientist and statistician who studies human learning and teaching.
 
-In my work, I develop methods for using natural language processing techniques and large language models in rigorous statistical analyses. My research has been funded by the Institute for Education Sciences and the Bill and Melinda Gates Foundation. Current projects include
+# Current Work
+
+I develop methods for using natural language processing techniques and large language models in rigorous statistical analyses. My research has been funded by the Institute for Education Sciences and the Bill and Melinda Gates Foundation. Current projects include
 
 -   Zero-shot learning methods coupled with generalized method of moments estimators to measure pedagogical practices from teachers' speech data
 

@@ -17,7 +17,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: broadside
     css: styles.css
     toc: true
 
