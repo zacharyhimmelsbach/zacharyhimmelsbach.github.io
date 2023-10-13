@@ -1,14 +1,14 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Zachary Himmelsbach",
-    "section": "",
-    "text": "Current Work\nI am a Harvard-trained data scientist and statistician who studies human learning and teaching.\nIn my work, I develop methods for using natural language processing techniques and large language models in rigorous statistical analyses. My research has been funded by the Institute for Education Sciences and the Bill and Melinda Gates Foundation. Current projects include\n\nZero-shot learning methods coupled with generalized method of moments estimators to measure pedagogical practices from teachers’ speech data\nHigh-dimensional word embeddings and permutation testing to identify words and phrases whose usage differs by group. I use this method to explore language differences between highly effective and less effective teachers\nA computational method to assess the sensitivity of regression discontinuity results to possible data manipulation\n\n\n\nPublished Works\n\nThe important role that teachers play in students’ development of mathematical language (Under Review)\nA multi-site RCT that identifies an effective intervention for reducing absenteeism in early grades (Peer Reviewed)\nThe role of standardized testing in college admissions (Peer Reviewed)\n\n\n\nBio\nI received my AM in Statistics from Harvard, where I am currently finishing my PhD in education policy. Previously, I worked as a research analyst at Harvard’s Center for Education Policy Research under the mentorship of Doug Staiger and Thomas Kane. In that role, I developed statistical software for Bayesian analyses of rapid cycle randomized control trials. Since then, I have continued to develop statistical software; currently, alongside Reagan Mozer and Luke Miratrix, I am developing RctText, an R package for impact analyses with text data as the outcome. My PhD commitee includes my advisor Sebastian Munoz-Najar, Luke Miratrix, and Andrew Ho.\nI have also interned with J-PAL Global at MIT, worked at Conversica (a tech company), and served in the Peace Corps. My other collaborators include Dora Demzsky, Heather Hill, and Jing Liu.\nIf you are interested in hiring a consultant or contractor for analytic work, email me. I am excited to work with you!"
-  },
-  {
     "objectID": "teaching.html",
     "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "In Spring 2024, I will serve as lecturer for a graduate applied statistics course at Harvard.\nIn the past, I have served as a teaching fellow for Harvard courses on\n\nIntermediate and Applied Statistics (EDUS052)\nQuantitative Text Analysis (EDUS059)\nData Science (EDUS043)\nIntroductory Applied Statistics (EDUS040)\n\nIn these roles, I developed and taught material on programming, statistical methods, and natural language processing."
+  },
+  {
+    "objectID": "teaching.html#teaching-experience",
+    "href": "teaching.html#teaching-experience",
     "title": "Teaching",
     "section": "",
     "text": "In Spring 2024, I will serve as lecturer for a graduate applied statistics course at Harvard.\nIn the past, I have served as a teaching fellow for Harvard courses on\n\nIntermediate and Applied Statistics (EDUS052)\nQuantitative Text Analysis (EDUS059)\nData Science (EDUS043)\nIntroductory Applied Statistics (EDUS040)\n\nIn these roles, I developed and taught material on programming, statistical methods, and natural language processing."
@@ -19,5 +19,12 @@
     "title": "Teaching",
     "section": "Teaching Evaluations",
     "text": "Teaching Evaluations\n\nData Science (2023)\nQuantitative Text Analysis (2023)\n\n(I do not have access to evaluations from pre-2023 due to Harvard changing its evaluation system)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Zachary Himmelsbach",
+    "section": "",
+    "text": "Current Work\nI am a Harvard-trained data scientist and statistician who studies human learning and teaching.\nIn my work, I develop methods for using natural language processing techniques and large language models in rigorous statistical analyses. My research has been funded by the Institute for Education Sciences and the Bill and Melinda Gates Foundation. Current projects include\n\nZero-shot learning methods coupled with generalized method of moments estimators to measure pedagogical practices from teachers’ speech data\nHigh-dimensional word embeddings and permutation testing to identify words and phrases whose usage differs by group. I use this method to explore language differences between highly effective and less effective teachers\nA computational method to assess the sensitivity of regression discontinuity results to possible data manipulation\n\n\n\nPublished Works\n\nThe important role that teachers play in students’ development of mathematical language (Under Review)\nA multi-site RCT that identifies an effective intervention for reducing absenteeism in early grades (Peer Reviewed)\nThe role of standardized testing in college admissions (Peer Reviewed)\n\n\n\nBio\nI received my AM in Statistics from Harvard, where I am currently finishing my PhD in education policy. Previously, I worked as a research analyst at Harvard’s Center for Education Policy Research under the mentorship of Doug Staiger and Thomas Kane. In that role, I developed statistical software for Bayesian analyses of rapid cycle randomized control trials. Since then, I have continued to develop statistical software; currently, alongside Reagan Mozer and Luke Miratrix, I am developing RctText, an R package for impact analyses with text data as the outcome. My PhD commitee includes my advisor Sebastian Munoz-Najar, Luke Miratrix, and Andrew Ho.\nI have also interned with J-PAL Global at MIT, worked at Conversica (a tech company), and served in the Peace Corps. My other collaborators include Dora Demzsky, Heather Hill, and Jing Liu.\nIf you are interested in hiring a consultant or contractor for analytic work, email me. I am excited to work with you!"
   }
 ]

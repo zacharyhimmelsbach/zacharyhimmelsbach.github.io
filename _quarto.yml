@@ -9,6 +9,11 @@ website:
       - href: index.qmd
         text: Home
       - teaching.qmd
+    tools:
+    - icon: twitter
+      href: https://twitter.com/z_himmelsbach
+    - icon: github
+      href: https://github.com/zacharyhimmelsbach
 
 format:
   html:
