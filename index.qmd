@@ -17,7 +17,7 @@ In my work, I develop methods for using natural language processing techniques a
 
 -   A computational method to assess the sensitivity of regression discontinuity results to possible data manipulation
 
-# Published Works  
+# Published Works
 
 -   [The important role that teachers play in students' development of mathematical language](https://www.edworkingpapers.com/sites/default/files/ai23-855.pdf) (Under Review)
 
