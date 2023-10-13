@@ -1,0 +1,27 @@
+---
+title: "Teaching"
+---
+
+## Teaching Experience
+
+In Spring 2024, I will serve as lecturer for a graduate applied statistics course at Harvard.
+
+In the past, I have served as a teaching fellow for Harvard courses on
+
+-   Intermediate and Applied Statistics (EDUS052)
+
+-   Quantitative Text Analysis (EDUS059)
+
+-   Data Science (EDUS043)
+
+-   Introductory Applied Statistics (EDUS040)
+
+In these roles, I developed and taught material on programming, statistical methods, and natural language processing.
+
+## Teaching Evaluations
+
+-   [Data Science](S022_Spring2023.pdf) (2023)
+
+-   [Quantitative Text Analysis](S059_Spring2023.pdf) (2023)
+
+(I do not have access to evaluations from pre-2023 due to Harvard changing its evaluation system)
