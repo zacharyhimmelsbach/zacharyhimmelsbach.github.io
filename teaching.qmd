@@ -4,7 +4,7 @@ title: "Teaching"
 
 ## Teaching Experience
 
-In Spring 2024, I will serve as lecturer for a graduate applied statistics course at Harvard.
+In Spring 2024, I will serve as lecturer for [a graduate applied statistics course at Harvard](s052_syllabus_spring2024.pdf).
 
 In the past, I have served as a teaching fellow for Harvard courses on
 
