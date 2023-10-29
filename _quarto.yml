@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - teaching.qmd
+      - href: regression_web_app.qmd
+        text: Serverless Web Apps
     tools:
     - icon: twitter
       href: https://twitter.com/z_himmelsbach

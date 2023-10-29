@@ -1,10 +1,132 @@
 ---
-title: "Regression Web App"
-author: "Zach Himmelsbach"
-jupyter: python3
+title: "Serverless Regression Web App"
+author: ""
+filters: 
+  - shinylive
 ---
 
-```{python}
-import numpy as np
-import matplotlib as plt
+I built the webapp below with python and shiny, but *all computation is executed locally*, on your computer or phone, through the magic of WebAssembly. You can [read about WebAssembly here](#0) and [learn about deploying shiny apps in python via WebAssembly here](#0).
+
+If you teach stats/data science, this is a great way to make interactive teaching tools without paying for a server, worrying about free services' user-limits (e.g. shinyapps), or dealing with DevOps. These can be especially helpful early in a course - before students have learned much programming - or in courses without a coding focus, so you can concentrate on statistical concepts without forcing students to simultaneously deal with coding challenges. The code is available on [the github repo for this website](https://github.com/zacharyhimmelsbach/zacharyhimmelsbach.github.io).
+
+The app fits a simple regression with data entered by the user. The model being estimated is $$Math\_Score_i=\beta_0 + \beta_1 Age_i + \varepsilon_i$$ $$\varepsilon \sim N(0, \sigma^2_\varepsilon)$$ I use this as part of an in-class activity where students draw their sample of data out of a bag (representing the population). All students enter their data in this app, calculate their t-statistics, and report them via a Google survey. Afterwards, I display the distribution of the students' test statistics and show that they resemble the theoretical sampling distribution.
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 750
+
+import pandas as pd
+from numpy import sqrt 
+import matplotlib.pyplot as plt
+from scipy import stats
+from shiny import App, Inputs, Outputs, Session, reactive, render, req, ui
+
+app_ui = ui.page_fluid(
+    ui.input_numeric('age', 'Input Age', None),
+    ui.input_numeric('math_score', 'Input Math Score', None),
+    ui.input_action_button('add_row', 'Add Row'),
+    ui.input_action_button('remove_row', 'Remove Row'),
+    ui.output_text('t_stat'),
+    ui.output_data_frame("grid"),
+    ui.output_plot("scatter"),
+    ui.panel_fixed(
+        ui.output_text_verbatim("detail"),
+        right="10px",
+        bottom="10px",
+    ),
+    class_="p-3",
+)
+
+
+def server(input: Inputs, output: Outputs, session: Session):
+    user_added_data = reactive.Value([])
+
+    @reactive.Effect
+    @reactive.event(input.add_row)
+    def add_row_to_df():
+        values = user_added_data()
+        values.append([input.age(), input.math_score()])
+
+    @reactive.Effect
+    @reactive.event(input.remove_row)
+    def remove_row_from_df():
+        values = user_added_data()
+        if len(values) > 1:
+            del values[-1]
+        elif len(values)==1:
+            del values[0]
+    
+    @output
+    @render.data_frame
+    @reactive.event(input.add_row, input.remove_row, ignore_none=False)
+    def grid():
+        height = 350 
+        width = "100%" 
+        return render.DataGrid(
+            pd.DataFrame(user_added_data(), columns=['age', 'math_score']),
+            height=height,
+            width=width
+        )
+
+    @output
+    @render.plot(alt='A scatterplot')
+    @reactive.event(input.add_row, input.remove_row, ignore_none=False)
+    def scatter():
+        dat = pd.DataFrame(user_added_data(), columns=['age', 'math_score'])
+        
+        if dat.empty: # Handle making plot before user adds data
+          dat = pd.DataFrame([[0,0]], columns=['age', 'math_score'])
+          alpha_arg = 0
+        else:
+          alpha_arg = 1
+        slope, intercept, r_value, p_value, std_err = stats.linregress(dat['age'], dat['math_score'])
+
+        fig, ax = plt.subplots()
+        ax.scatter(dat['age'], dat['math_score'], label="Sample Data", alpha=alpha_arg)
+        ax.plot(dat['age'], intercept + slope * dat['age'], color='red', label="OLS Regression Line")
+
+        ax.set_xlabel("Age")
+        ax.set_ylabel("Math Score")
+        ax.legend()
+        ax.set_title("Regression in Your Sample")
+        ax.grid(True)
+
+        return(fig)
+    
+    @output
+    @render.text
+    @reactive.event(input.add_row, input.remove_row, ignore_none=False)
+    def t_stat():
+        dat = pd.DataFrame(user_added_data(), columns=['age', 'math_score'])
+        X = dat['age']
+        Y = dat['math_score']
+        
+        n = len(X)
+        if n < 3:
+          return('Not enough data to calcuate t-statistic (3 rows required)')
+
+        # Calculate the means of X and Y
+        mean_X = X.mean()
+        mean_Y = Y.mean()
+        
+        # Calculate the sum of squared differences for X
+        ss_X = ((X - mean_X) ** 2).sum()
+        
+        # Calculate the regression coefficient (slope)
+        beta_1 = ((X - mean_X) * (Y - mean_Y)).sum() / ss_X
+        
+        # Calculate the standard error of the estimate
+        y_predicted = beta_1 * X + (mean_Y - beta_1 * mean_X)
+        residuals = Y - y_predicted
+        mse = (residuals ** 2).sum() / (n - 2)  # n - 2 degrees of freedom
+        std_error = sqrt(mse / ss_X)
+        
+        # Calculate the t-statistic
+        t_statistic = round(beta_1 / std_error, 2)
+        
+        return(f't-stat: {t_statistic}\nEstimated Slope: {round(beta_1,2)}')
+
+app = App(app_ui, server)
+
+
 ```
