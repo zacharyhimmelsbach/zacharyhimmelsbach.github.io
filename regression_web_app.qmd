@@ -73,13 +73,18 @@ def server(input: Inputs, output: Outputs, session: Session):
     @reactive.event(input.add_row, input.remove_row, ignore_none=False)
     def scatter():
         dat = pd.DataFrame(user_added_data(), columns=['age', 'math_score'])
-        
-        if dat.empty: # Handle making plot before user adds data
-          dat = pd.DataFrame([[0,0]], columns=['age', 'math_score'])
-          alpha_arg = 0
+
+        # Provide sensible defaults when there are too few points for regression
+        if dat.empty:
+            dat = pd.DataFrame([[0, 0]], columns=['age', 'math_score'])
+            alpha_arg = 0
+            slope, intercept = 0, 0
+        elif len(dat) == 1:
+            alpha_arg = 1
+            slope, intercept = 0, dat['math_score'].iloc[0]
         else:
-          alpha_arg = 1
-        slope, intercept, r_value, p_value, std_err = stats.linregress(dat['age'], dat['math_score'])
+            alpha_arg = 1
+            slope, intercept, _, _, _ = stats.linregress(dat['age'], dat['math_score'])
 
         fig, ax = plt.subplots()
         ax.scatter(dat['age'], dat['math_score'], label="Sample Data", alpha=alpha_arg)
