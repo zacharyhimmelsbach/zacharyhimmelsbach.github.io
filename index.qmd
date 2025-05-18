@@ -6,7 +6,7 @@ about:
   template: broadside
 ---
 
-I am a Harvard-trained data scientist and statistician who studies human learning and teaching.
+I am a data scientist and statistician currently working in neuroscience and clinical psychology research. My other interests include developing methods for the analysis of unstructured data, causal inference, and educational research. I completed my AM and PhD at Harvard University.
 
 # Current Work
 
@@ -18,7 +18,8 @@ I develop methods for using natural language processing techniques and large lan
 
 -   A computational method to assess the sensitivity of regression discontinuity results to possible data manipulation
 
-# Published Works
+# Selected Publications
+-   [Estimating Heterogeneous Treatment Effects with Item-Level Outcome Data](https://arxiv.org/abs/2405.00161) (Conditionally Accepted at Journal of Public Policy Analysis and Management)
 
 -   [The important role that teachers play in students' development of mathematical language](https://www.edworkingpapers.com/sites/default/files/ai23-855.pdf) (Under Review)
 
@@ -28,8 +29,8 @@ I develop methods for using natural language processing techniques and large lan
 
 # Bio
 
-I received my AM in Statistics from Harvard, where I am currently finishing my PhD in education policy. Previously, I worked as a research analyst at Harvard's Center for Education Policy Research under the mentorship of [Doug Staiger](https://sites.dartmouth.edu/dstaiger/) and [Thomas Kane](https://www.gse.harvard.edu/directory/faculty/thomas-kane). In that role, I developed statistical software for Bayesian analyses of rapid cycle randomized control trials. Since then, I have continued to develop statistical software; currently, alongside [Reagan Mozer](https://www.reaganmozer.com/) and [Luke Miratrix](https://scholar.harvard.edu/lmiratrix/home), I am developing [RctText](https://github.com/reaganmozer/rcttext), an R package for impact analyses with text data as the outcome. My PhD commitee includes my advisor [Sebastian Munoz-Najar](https://www.gse.harvard.edu/directory/faculty/sebastian-munoz-najar-galvez), Luke Miratrix, and [Andrew Ho](https://scholar.harvard.edu/andrewho/home).
+Previously, I worked as a research analyst at Harvard's Center for Education Policy Research under the mentorship of [Doug Staiger](https://sites.dartmouth.edu/dstaiger/) and [Thomas Kane](https://www.gse.harvard.edu/directory/faculty/thomas-kane). In that role, I developed statistical software for Bayesian analyses of rapid cycle randomized control trials. Since then, I have continued to develop statistical software; alongside [Reagan Mozer](https://www.reaganmozer.com/) and my PhD advisor [Luke Miratrix](https://scholar.harvard.edu/lmiratrix/home), I contributed to [RctText](https://github.com/reaganmozer/rcttext), an R package for impact analyses with text data as the outcome. My PhD commitee includes my advisor [Sebastian Munoz-Najar](https://www.gse.harvard.edu/directory/faculty/sebastian-munoz-najar-galvez), Luke Miratrix, and [Andrew Ho](https://scholar.harvard.edu/andrewho/home).
 
 I have also interned with J-PAL Global at MIT, worked at Conversica (a tech company), and served in the Peace Corps. My other collaborators include [Dora Demzsky](https://www.dorademszky.com/), [Heather Hill](https://www.gse.harvard.edu/directory/faculty/heather-hill), and [Jing Liu](https://education.umd.edu/directory/jing-liu).
 
-If you are interested in hiring a consultant or contractor for analytic work, [email me](mailto:zacharyhimmelsbach@gmail.com). I am excited to work with you!
+If you're looking for a consultant or collaborator on research or analytic projects, feel free to get in touch. I’d love to hear from you.
